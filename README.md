@@ -1,59 +1,49 @@
-# React Deadline Scheduler with Spring Boot Backend
+# Frontend Client for Deadline Scheduler
 
-## Overview
-
-React Deadline Scheduler with Spring Boot Backend is a web application designed to help users manage deadlines effectively. The front end is built using React, while the backend is powered by Spring Boot, providing a seamless user experience and robust server-side functionality.
+This project is a frontend client for a deadline scheduler built using React with Vite. It provides a user-friendly interface for managing deadlines, including functionalities such as adding, editing, deleting, and reading deadlines from a REST API.
 
 ## Features
 
-- **Deadline Management**: Users can easily create, update, and delete deadlines, keeping track of their tasks efficiently.
+- **Add Deadlines**: Users can easily add new deadlines by providing relevant information such as title, description, due date, etc.
+- **Edit Deadlines**: Existing deadlines can be modified, allowing users to update details like title, description, and due date.
+- **Delete Deadlines**: Users have the ability to remove deadlines that are no longer needed.
+- **View Deadlines**: The client allows users to view a list of deadlines retrieved from the REST API.
 
-- **Categorization based on Time Left**: Deadlines are automatically categorized based on the time left until their due dates, allowing users to focus on urgent tasks and plan ahead for future ones.
+## Technologies Used
 
-## Getting Started
+- **React**: The frontend is built using React.
+- **Vite**: Vite is used as the build tool for this project, providing fast and efficient development and building processes.
+- **REST API**: The client communicates with a RESTful API to perform CRUD operations on deadlines.
 
-1. **Clone the Repository**: Clone this repository to your local machine.
+## Installation
 
-   ```bash
-   git clone https://github.com/yourusername/react-deadline-scheduler.git
-   ```
-
-2. **Frontend Setup**: Navigate to the `frontend` directory and install dependencies.
-
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-3. **Backend Setup**: Navigate to the `backend` directory and install dependencies.
+1. Clone the repository:
 
    ```bash
-   cd backend
-   mvn install
+   git clone https://github.com/avgmathenjoyer/deadline-frontend.git
    ```
-
-4. **Set Up Database**: Configure your database settings in the `application.properties` file located in the `backend/src/main/resources` directory.
-
-5. **Run the Application**: Start the backend server first, then start the frontend server.
-
+2. Navigate to the project directory:
    ```bash
-   # In the backend directory
-   mvn spring-boot:run
-   
-   # In the frontend directory
-   npm start
+   cd deadline-frontend
+   ```
+3. Install dependencies:
+   ```bash
+      npm install
    ```
 
-6. **Access the Application**: Open your browser and navigate to `http://localhost:3000` to access the application.
+## Usage
 
-## Contributing
+1. Setup the .env.local file:
+   ```init
+      VITE_DATA_URL= # url to your api endpoint. It needs to end with /.
+   ```
+2. Start the development server:
+   ```bash
+      npm run dev
+   ```
 
-Contributions are welcome! If you have any ideas for improvements or new features, feel free to open an issue or submit a pull request.
+3. Interact with the frontend client to add, edit, delete, and view deadlines as needed.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- Built with [React](https://reactjs.org/) and [Spring Boot](https://spring.io/projects/spring-boot/)
